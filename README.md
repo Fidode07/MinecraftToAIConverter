@@ -9,3 +9,6 @@ First, you need to install CUDA and CUDnn. Sounds complicated, but it is. After 
 
 # Help! Where! I AM TOO STUPID!
 I'm just kidding, the installation is also a bit complicated. Just write me on Discord, I'm always happy to help you: Fido_de02#9227.
+
+# IMPORTANT!
+My AI is stupid. Very stupid, in fact. At the moment it can only speak German, but I will add a translator, don't worry! 👌
