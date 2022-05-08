@@ -5,7 +5,7 @@ The project is pretty simple. It's about bringing artificial intelligence into M
 Open the terminal and write "/MinecraftToAIConverter".
 .... Okay, you got me. Sorry, it's not that simple.
 
-First, you CAN install CUDA and CUDnn. Sounds complicated, but it is. If you don't install CUDA and CUDnn, then Artificial Intelligence will run on your CPU. So install CUDA and CUDnn only if your CPU is really too weak (Which is very unlikely). After that, you need Java 8, which is easy to install (I think). After that, you just drag the plugin (MinecraftToAIConverter.jar) to the plugin folder from the server and run the Python script (The AI). WOW!!! Your villagers can now reveal their names .... 👏 
+First, you **CAN** install CUDA and CUDnn. Sounds complicated, but it is. If you don't install CUDA and CUDnn, then Artificial Intelligence will run on your CPU. So install CUDA and CUDnn only if your CPU is really too weak (Which is very unlikely). After that, you need Java 8, which is easy to install (I think). After that, you just drag the plugin (MinecraftToAIConverter.jar) to the plugin folder from the server and run the Python script (The AI). WOW!!! Your villagers can now reveal their names .... 👏 
 
 # Help! Where! I AM TOO STUPID!
 I'm just kidding, the installation is also a bit complicated. Just write me on Discord, I'm always happy to help you: Fido_de02#9227.
