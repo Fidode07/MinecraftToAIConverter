@@ -15,3 +15,6 @@ My AI is stupid. Very stupid, in fact. At the moment it can only speak German, b
 
 # 💻 Can my potato (computer) even do that? Can my wonder potato run an AI? 💻
 All right, let me think about it. I have a GTX 970 with hardware errors, and the AI is still good even on CPU. In itself, everything should run cleanly, even without CUDA.
+
+# HOW DOES IT WORK INGAME!!
+You can write with the villagers with /chat <message>. They will start glowing when you are close enough for them to understand you. Also, they all have one of 44 names that will stay forever.
