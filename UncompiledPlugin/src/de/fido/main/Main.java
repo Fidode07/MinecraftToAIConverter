@@ -1,17 +1,17 @@
 package de.fido.main;
 
+import de.fido.MobScanner.MScanner;
 import de.fido.VarManager.VManager;
 import de.fido.commands.VillagerChatCMD;
+import de.fido.listeners.PlayerHandler;
 import de.fido.listeners.VillagerHandler;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
-import org.bukkit.Location;
 import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
+import org.bukkit.entity.Player;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 
@@ -22,6 +22,7 @@ public class Main extends JavaPlugin {
             "Arik", "Jack", "Jannik", "Jonathan", "Joel", "Jarin", "Jörn", "Calvin", "Kilian", "Jeremy", "Lars"};
 
     VManager classObjVMan = new VManager();
+    MScanner mScann = new MScanner();
 
 
     public void onEnable() {
@@ -31,7 +32,12 @@ public class Main extends JavaPlugin {
 
         getCommand("chat").setExecutor(new VillagerChatCMD());
 
-        getServer().getPluginManager().registerEvents(new VillagerHandler(), this);
+        PluginManager PlManager = getServer().getPluginManager();
+
+        PlManager.registerEvents(new VillagerHandler(), this);
+        PlManager.registerEvents(new PlayerHandler(), this);
+
+        mScann.scann();
 
         System.out.println(ChatColor.GREEN + "Succefully initialized Commands and Listeners. Start Villager Setup ...");
 
@@ -47,6 +53,10 @@ public class Main extends JavaPlugin {
                 }
             }
         });
+
+        for(Player p : Bukkit.getOnlinePlayers()){
+            classObjVMan.listOfPlayers.add(p);
+        }
 
         System.out.println(prefix + "Succefully Booted!");
     }

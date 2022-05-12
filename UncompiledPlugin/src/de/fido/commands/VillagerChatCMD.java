@@ -1,7 +1,6 @@
 package de.fido.commands;
 
 import de.fido.VarManager.VManager;
-import de.fido.main.Main;
 import org.bukkit.*;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -9,7 +8,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Entity;
-import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
@@ -17,15 +15,10 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.entity.Villager;
 
 import java.io.*;
-import java.lang.annotation.Target;
-import java.lang.reflect.Array;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.nio.charset.StandardCharsets;
 import java.util.*;
-import java.util.concurrent.ThreadLocalRandom;
-import java.util.concurrent.TimeUnit;
-import java.nio.charset.Charset;
+
 
 
 public class VillagerChatCMD implements CommandExecutor {
@@ -110,31 +103,13 @@ public class VillagerChatCMD implements CommandExecutor {
 
                     String joinedString = stringBuilder.toString();
 
-                    int FoundCount = 0;
-
-                    for(Entity entity : VManager.listOfAllEntitys) {
-                        FoundCount = FoundCount+1;
-                    }
-
-                    if(FoundCount == 1) {
-
                         Villager TargetVillager = null;
 
-                        for (Entity entity : VManager.listOfAllEntitys) {
-                            TargetVillager = (Villager) entity;
-                            if (!(lastTargetVillager == null)) {
-                                if (!(lastTargetVillager == entity)) {
-                                    lastTargetVillager.setGlowing(false);
-                                }
-                            }
-
-                            lastTargetVillager = entity;
-                        }
-
-                        assert TargetVillager != null;
-
-                        if (!(TargetVillager.isGlowing())) {
-                            TargetVillager.setGlowing(true);
+                        if(!(classObjVMan.curVillager == null)) {
+                            TargetVillager = (Villager) classObjVMan.curVillager;
+                        } else {
+                            p.sendMessage(ChatColor.DARK_RED+"Sorry, there is no Villager or there too much.");
+                            return true;
                         }
 
                         sendToPython(joinedString);
@@ -183,12 +158,6 @@ public class VillagerChatCMD implements CommandExecutor {
                                 p.sendMessage(ChatColor.GOLD+"[DU] " + ChatColor.WHITE + joinedString);
                                 p.sendMessage(ChatColor.DARK_PURPLE + "["+TargetVillager.getCustomName()+" - Villager] " + ChatColor.GRAY + PyResponse);
                         }
-
-                    } else if(FoundCount >= 2) {
-                        p.sendMessage(ChatColor.DARK_RED+"Sorry, there a too Many Villagers!");
-                    } else {
-                        p.sendMessage(ChatColor.DARK_RED+"Sorry, there is no Villager. You have to get closer!");
-                    }
 
                 } catch (IOException | InterruptedException e) {
                     sender.sendMessage(ChatColor.RED+"Sorry, there was a Error!");

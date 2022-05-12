@@ -9,8 +9,6 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.event.entity.EntitySpawnEvent;
-import org.bukkit.event.player.PlayerMoveEvent;
-import java.util.List;
 import java.util.Random;
 
 public class VillagerHandler implements Listener {
@@ -35,33 +33,33 @@ public class VillagerHandler implements Listener {
         return true;
     }
 
-    @EventHandler
-    public void onMove(PlayerMoveEvent e) {
-        foundCount = 0;
-
-        for(Entity entity : VManager.listOfAllEntitys) {
-            if (isInBorder(e.getPlayer().getLocation(), entity.getLocation(), 2)) {
-                foundCount = foundCount + 1;
-                curVillager = entity;
-            } else {
-                if (entity.isGlowing()) {
-                    entity.setGlowing(false);
-                }
-            }
-        }
-
-        if (foundCount == 1 && curVillager != null) {
-            if (!(curVillager.isGlowing())) {
-                curVillager.setGlowing(true);
-            }
-        } else if (foundCount >= 2) {
-            for (Entity entity : VManager.listOfAllEntitys) {
-                if (entity.isGlowing()) {
-                    entity.setGlowing(false);
-                }
-            }
-        }
-    }
+//    @EventHandler
+//    public void onMove(PlayerMoveEvent e) {
+//        foundCount = 0;
+//
+//        for(Entity entity : VManager.listOfAllEntitys) {
+//            if (isInBorder(e.getPlayer().getLocation(), entity.getLocation(), 2)) {
+//                foundCount = foundCount + 1;
+//                curVillager = entity;
+//            } else {
+//                if (entity.isGlowing()) {
+//                    entity.setGlowing(false);
+//                }
+//            }
+//        }
+//
+//        if (foundCount == 1 && curVillager != null) {
+//            if (!(curVillager.isGlowing())) {
+//                curVillager.setGlowing(true);
+//            }
+//        } else if (foundCount >= 2) {
+//            for (Entity entity : VManager.listOfAllEntitys) {
+//                if (entity.isGlowing()) {
+//                    entity.setGlowing(false);
+//                }
+//            }
+//        }
+//    }
 
     @EventHandler
     public void onMobSpawn(EntitySpawnEvent e) {
