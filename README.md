@@ -5,7 +5,12 @@
   Open the terminal and write "/MinecraftToAIConverter".
   .... Okay, you got me. Sorry, it's not that simple.
 
-  First, you **CAN** install CUDA and CUDnn. Sounds complicated, but it is. If you don't install CUDA and CUDnn, then Artificial Intelligence will run on your CPU. So install CUDA and CUDnn only if your CPU is really too weak (Which is very unlikely). After that, you need Java 8, which is easy to install (I think). After that, you just drag the plugin (MinecraftToAIConverter.jar) to the plugin folder from the server and run the Python script (The AI). WOW!!! Your villagers can now reveal their names .... 👏 
+1. You **CAN** install CUDA and CUDnn. Sounds complicated, but it is (If you don't install CUDA and CUDnn, then Artificial Intelligence will run on your CPU).
+2. After that, you need Java 8, which is easy to install (I think). 
+3. After that, you just drag the plugin (MinecraftToAIConverter.jar) to the plugin folder from the server and run the Python script (The AI).
+
+WOW!!! Your villagers can now reveal their names .... 👏 
+<strong>NOTE:</strong> CUDA and CUDnn are not required for this lightweight AI! It should be able to run just as well on the CPU.
 
 <h2>Help! Where! I AM TOO STUPID!</h2>
   I'm just kidding, the installation is really a bit complicated. Just write me on Discord, I'm always happy to help you: Fido_de02#9227.
