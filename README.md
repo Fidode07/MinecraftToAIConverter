@@ -21,3 +21,10 @@ You can write with the villagers with /chat (message). They will start glowing w
 
 # ℹ️ Other Informations ℹ️
 Trained on: GTX 970 (with Hardware errors) and i3 10100f
+
+# Images
+Greeting:
+![alt text](https://raw.githubusercontent.com/Fidode07/MinecraftToAIConverter/main/IMAGES/greeting.png)
+
+Ask for Name:
+![alt text](https://raw.githubusercontent.com/Fidode07/MinecraftToAIConverter/main/IMAGES/name.png)
