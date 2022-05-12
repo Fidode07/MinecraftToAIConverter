@@ -10,7 +10,7 @@ First, you **CAN** install CUDA and CUDnn. Sounds complicated, but it is. If you
 # Help! Where! I AM TOO STUPID!
 I'm just kidding, the installation is really a bit complicated. Just write me on Discord, I'm always happy to help you: Fido_de02#9227.
 
-# IMPORTANT!
+# <strong style="color: red;">IMPORTANT!</strong>
 My AI is stupid. Very stupid, in fact. At the moment it can only speak German, but I will add a translator, don't worry! 👌
 
 # 💻 Can my potato (computer) even do that? Can my wonder potato run an AI? 💻
@@ -23,8 +23,8 @@ You can write with the villagers with /chat (message). They will start glowing w
 Trained on: GTX 970 (with Hardware errors) and i3 10100f
 
 # Images
-Greeting:
+Greeting: <br />
 ![alt text](https://raw.githubusercontent.com/Fidode07/MinecraftToAIConverter/main/IMAGES/greeting.png)
 
-Ask for Name:
+Ask for Name: <br />
 ![alt text](https://raw.githubusercontent.com/Fidode07/MinecraftToAIConverter/main/IMAGES/name.png)
