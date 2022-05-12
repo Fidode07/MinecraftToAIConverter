@@ -24,6 +24,7 @@ Trained on: GTX 970 (with Hardware errors) and i3 10100f
 
 # Images
 <h3>Greeting:</h3> <br />
+
 ![alt text](https://raw.githubusercontent.com/Fidode07/MinecraftToAIConverter/main/IMAGES/greeting.png)
 
 Ask for Name: <br />
