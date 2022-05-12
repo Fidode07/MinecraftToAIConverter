@@ -19,10 +19,10 @@ All right, let me think about it. I have a GTX 970 with hardware errors, and the
 # HOW DOES IT WORK INGAME!!
 You can write with the villagers with /chat (message). They will start glowing when you are close enough for them to understand you. Also, they all have one of 44 names that will stay forever.
 
-# ℹ️ Other Informations ℹ️
+<h2> ℹ️ Other Informations ℹ️ </h2>
 Trained on: GTX 970 (with Hardware errors) and i3 10100f
 
-<h1>🖼️ Images 🖼️</h1>
+<h2>🖼️ Images 🖼️</h2>
 <h3>Greeting:</h3> <br />
 
 ![alt text](https://raw.githubusercontent.com/Fidode07/MinecraftToAIConverter/main/IMAGES/greeting.png)
