@@ -8,7 +8,7 @@ Open the terminal and write "/MinecraftToAIConverter".
 First, you **CAN** install CUDA and CUDnn. Sounds complicated, but it is. If you don't install CUDA and CUDnn, then Artificial Intelligence will run on your CPU. So install CUDA and CUDnn only if your CPU is really too weak (Which is very unlikely). After that, you need Java 8, which is easy to install (I think). After that, you just drag the plugin (MinecraftToAIConverter.jar) to the plugin folder from the server and run the Python script (The AI). WOW!!! Your villagers can now reveal their names .... 👏 
 
 # Help! Where! I AM TOO STUPID!
-I'm just kidding, the installation is also a bit complicated. Just write me on Discord, I'm always happy to help you: Fido_de02#9227.
+I'm just kidding, the installation is really a bit complicated. Just write me on Discord, I'm always happy to help you: Fido_de02#9227.
 
 # IMPORTANT!
 My AI is stupid. Very stupid, in fact. At the moment it can only speak German, but I will add a translator, don't worry! 👌
@@ -18,3 +18,6 @@ All right, let me think about it. I have a GTX 970 with hardware errors, and the
 
 # HOW DOES IT WORK INGAME!!
 You can write with the villagers with /chat (message). They will start glowing when you are close enough for them to understand you. Also, they all have one of 44 names that will stay forever.
+
+# ℹ️ Other Informations ℹ️
+Trained on: GTX 970 (with Hardware errors) and i3 10100f
