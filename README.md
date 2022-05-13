@@ -19,6 +19,8 @@ WOW!!! Your villagers can now reveal their names .... 👏
 
 <h2><strong>IMPORTANT!</strong></h2>
   The AI was pretty stupid. Very stupid to be honest. But because I'm so cool, that's over now. I made a translator, you can now choose your language in the "Config.json". It is located in "PythonAI/Config.json".👌
+  </br></br>
+  Also, it is very important that you customize the Config.json. It's really not hard (and not much). If you don't, I'll eat your cat 👀.
 
 <h2>💻 Can my potato (computer) even do that? Can my wonder potato run an AI? 💻</h2>
   All right, let me think about it. I have a GTX 970 with hardware errors, and the AI is still good even on CPU. In itself, everything should run cleanly, even without CUDA.
