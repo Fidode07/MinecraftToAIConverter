@@ -14,8 +14,8 @@
 WOW!!! Your villagers can now reveal their names .... 👏 
 <strong>NOTE:</strong> CUDA and CUDnn are not required for this lightweight AI! It should be able to run just as well on the CPU.
 
-<h2>Help! Where! I AM TOO STUPID!</h2>
-  I'm just kidding, the installation is really a bit complicated. Just write me on Discord, I'm always happy to help you: Fido_de02#9227.
+<h2>Help! Where! PLEASE!</h2>
+  Yes, you're right. The installation is really a bit complicated. Just write me on Discord, I'm always happy to help you: Fido_de02#9227.
 
 <h2><strong>IMPORTANT!</strong></h2>
   The AI was pretty stupid. Very stupid to be honest. But because I'm so cool, that's over now. I made a translator, you can now choose your language in the "Config.json". It is located in "PythonAI/Config.json".👌
