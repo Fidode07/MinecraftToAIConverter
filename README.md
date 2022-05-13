@@ -40,7 +40,7 @@ WOW!!! Your villagers can now reveal their names .... 👏
 
 ![alt text](https://raw.githubusercontent.com/Fidode07/MinecraftToAIConverter/main/IMAGES/name.png)
 
-<h3>Greeting (English):</h3> </br>
+<h3>Ask for name (English):</h3> </br>
 
 ![alt text](https://raw.githubusercontent.com/Fidode07/MinecraftToAIConverter/main/IMAGES/2022-05-13_16.25.15.png)
 
