@@ -5,17 +5,13 @@ import org.bukkit.*;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.entity.Villager;
 
 import java.io.*;
-import java.lang.annotation.Target;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.*;
@@ -138,9 +134,10 @@ public class VillagerChatCMD implements CommandExecutor {
                         }
 
 
-                        p.sendMessage(ChatColor.GOLD+"[DU] " + ChatColor.WHITE + joinedString);
-                        p.sendMessage(ChatColor.DARK_PURPLE + "["+TargetVillager.getCustomName()+" - Villager] " + ChatColor.GRAY + PyResponse);
-
+                        if(!(PyResponse.equals("NONERESP"))) {
+                            p.sendMessage(ChatColor.GOLD + "[DU] " + ChatColor.WHITE + joinedString);
+                            p.sendMessage(ChatColor.DARK_PURPLE + "[" + TargetVillager.getCustomName() + " - Villager] " + ChatColor.GRAY + PyResponse);
+                        }
 
                 } catch (IOException | InterruptedException e) {
                     sender.sendMessage(ChatColor.RED+"Sorry, there was a Error!");

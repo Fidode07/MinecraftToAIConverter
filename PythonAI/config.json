@@ -12,7 +12,7 @@
           "The option 'train_on_boot', trains the AI just before it is started.",
           "This is important and recommended, because if you change the .json file to have custom responses, then the change will",
           "only have effect with that."],
-        "language": "de",
+        "language": "en",
         "train_on_boot": "true"
     }
   ]
