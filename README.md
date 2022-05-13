@@ -32,10 +32,19 @@ WOW!!! Your villagers can now reveal their names .... 👏
 1. Several languages (I know, I'm just cool)
 2. Make your villagers reveal their names etc.
 <h2>🖼️ Images 🖼️</h2>
-<h3>Greeting:</h3> <br />
+<h3>Greeting (German):</h3> <br />
 
 ![alt text](https://raw.githubusercontent.com/Fidode07/MinecraftToAIConverter/main/IMAGES/greeting.png)
 
-<h3>Ask for Name:</h3> <br />
+<h3>Ask for Name (German):</h3> <br />
 
 ![alt text](https://raw.githubusercontent.com/Fidode07/MinecraftToAIConverter/main/IMAGES/name.png)
+
+<h3>Greeting (English):</h3> </br>
+
+![alt text](https://raw.githubusercontent.com/Fidode07/MinecraftToAIConverter/main/IMAGES/2022-05-13_16.25.15.png)
+
+<h3>Ask for better price (English)["Make me a better price"]:</h3></br>
+
+![alt text](https://raw.githubusercontent.com/Fidode07/MinecraftToAIConverter/main/IMAGES/2022-05-13_17.04.08.png)
+
