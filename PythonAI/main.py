@@ -142,7 +142,7 @@ while True:
                                                            "Allerdings werde ich versuchen, das, was du gesagt hast, "
                                                            "irgendwann verstehen zu können. " \
                                                            "Bitte vergiss dabei aber nicht, dass ich zurzeit nur dazu "
-                                                           "da bin, um mit dir zu handeln! ", lang=mySetting['language'])
+                                                           "da bin, um mit dir zu handeln!", lang=mySetting['language'])
         host = "localhost"
         s2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s2.connect((host, 4839))

@@ -17,10 +17,6 @@ public class VillagerHandler implements Listener {
     public Entity curVillager = null;
     VManager classObjVMan = new VManager();
 
-    public String[] VillagerNames = {"Tom", "Manfred", "Thomas", "Christoph", "Luke", "Falko", "Flavio", "Fady", "Fynn", "Mark", "Morris", "Matti", "Gustav", "Phillipp",
-            "Felix", "Julian", "Finn", "Paul", "Luis", "Henry", "Peter", "Quirin", "Liam", "Oswald", "Henryk", "Haku", "Hakan", "Ali", "Mohammed", "Quinn", "Kasimir", "Rene",
-            "Arik", "Jack", "Jannik", "Jonathan", "Joel", "Jarin", "Jörn", "Calvin", "Kilian", "Jeremy", "Lars"};
-
     public static int foundCount = 0;
 
     public static boolean isInBorder(Location center, Location notCenter, int range) {
@@ -64,7 +60,7 @@ public class VillagerHandler implements Listener {
     @EventHandler
     public void onMobSpawn(EntitySpawnEvent e) {
         Random generate = new Random();
-        String TargetName = VillagerNames[generate.nextInt(VillagerNames.length)];
+        String TargetName = classObjVMan.VillagerNames[generate.nextInt(classObjVMan.VillagerNames.length)];
         if (e.getEntityType() == EntityType.VILLAGER) {
             VManager.listOfAllEntitys.add(e.getEntity());
             if (e.getEntity().getCustomName() == null) {
