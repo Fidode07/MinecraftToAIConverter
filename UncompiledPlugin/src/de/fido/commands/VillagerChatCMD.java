@@ -29,10 +29,6 @@ public class VillagerChatCMD implements CommandExecutor {
 
     static VManager classObjVMan = new VManager();
 
-    public String[] weHaveNoAge = {"Tut mir leid, ein genaues Alter haben wir leider nicht.",
-            "Sorry, bedauerlicherweise haben wir kein genaues Alter.",
-            "Wir Dorfbewohner haben enttäuschenderweise kein genaues Alter, tut mir leid.",
-            "Wir haben bedauerlicherweise kein genaues Alter, sorry."};
     public int Quarzpreis = 500;
 
     public static void sendToPython(String message) throws IOException, InterruptedException {
@@ -142,14 +138,9 @@ public class VillagerChatCMD implements CommandExecutor {
                         }
 
 
-                        if(PyResponse.equals("ASKHOWOLD")) {
-                            System.out.println("He trys to get our Age.");
-                            p.sendMessage(ChatColor.GOLD+"[DU] " + ChatColor.WHITE + joinedString);
-                            p.sendMessage(ChatColor.DARK_PURPLE + "["+TargetVillager.getCustomName()+" - Villager] " + ChatColor.GRAY + weHaveNoAge[generate.nextInt(weHaveNoAge.length)]);
-                        } else {
-                                p.sendMessage(ChatColor.GOLD+"[DU] " + ChatColor.WHITE + joinedString);
-                                p.sendMessage(ChatColor.DARK_PURPLE + "["+TargetVillager.getCustomName()+" - Villager] " + ChatColor.GRAY + PyResponse);
-                        }
+                        p.sendMessage(ChatColor.GOLD+"[DU] " + ChatColor.WHITE + joinedString);
+                        p.sendMessage(ChatColor.DARK_PURPLE + "["+TargetVillager.getCustomName()+" - Villager] " + ChatColor.GRAY + PyResponse);
+
 
                 } catch (IOException | InterruptedException e) {
                     sender.sendMessage(ChatColor.RED+"Sorry, there was a Error!");
