@@ -11,7 +11,7 @@
 4. After that go to the page [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/), choose what you need and then execute the command that the page gave you
 5. After that, you just drag the plugin (MinecraftToAIConverter.jar) to the plugin folder from the server and run the Python script (The AI).
 
-WOW!!! Your villagers can now reveal their names .... 👏 
+WOW!!! Your villagers can now reveal their names .... 👏 </br>
 <strong>NOTE:</strong> CUDA and CUDnn are not required for this lightweight AI! It should be able to run just as well on the CPU.
 
 <h2>Help! Where! PLEASE!</h2>
