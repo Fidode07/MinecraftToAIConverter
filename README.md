@@ -16,7 +16,7 @@ WOW!!! Your villagers can now reveal their names .... 👏
   I'm just kidding, the installation is really a bit complicated. Just write me on Discord, I'm always happy to help you: Fido_de02#9227.
 
 <h2><strong>IMPORTANT!</strong></h2>
-  My AI is stupid. Very stupid, in fact. At the moment it can only speak German, but I will add a translator, don't worry! 👌
+  The AI was pretty stupid. Very stupid to be honest. But because I'm so cool, that's over now. I made a translator, you can now choose your language in the "Config.json". It is located in "PythonAI/Config.json".👌
 
 <h2>💻 Can my potato (computer) even do that? Can my wonder potato run an AI? 💻</h2>
   All right, let me think about it. I have a GTX 970 with hardware errors, and the AI is still good even on CPU. In itself, everything should run cleanly, even without CUDA.
