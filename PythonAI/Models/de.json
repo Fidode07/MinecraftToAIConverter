@@ -1008,7 +1008,10 @@
         "sag mir mal bitte dein alter jetzt"
       ],
       "responses": [
-        "ASKHOWOLD"
+        "Tut mir leid, ein genaues Alter haben wir leider nicht.",
+        "Sorry, bedauerlicherweise haben wir kein genaues Alter.",
+        "Wir Dorfbewohner haben enttäuschenderweise kein genaues Alter, tut mir leid.",
+        "Wir haben bedauerlicherweise kein genaues Alter, sorry."
       ]
     },
     {

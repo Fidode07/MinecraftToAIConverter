@@ -39,6 +39,12 @@ print("Language: " + mySetting["language"])
 
 if os.path.isfile(f"Models/{mySetting['language']}.pth"):
     print("Model was already rendered!")
+
+    weHaveToTrain = mySetting["train_on_boot"]
+
+    if weHaveToTrain.lower() == "true":
+        print("Lets Train!")
+        TrainerUtil.MyTrain.train_a_model(mySetting['language'])
 else:
     print("Lets Translate the German Model to " + mySetting['language'])
     TransLator = Translator.MyCustomTranslator()

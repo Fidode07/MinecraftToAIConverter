@@ -7,8 +7,13 @@
           "For example, for English it is 'en', for German 'de', etc.",
           "When you have found the abbreviation, change the value of 'language' (the tag below this comment) to the abbreviation.",
           "If you have any questions, feel free to write me on Discord: Fido_de02#9227",
-          "GitHub: https://github.com/Fidode07"],
-        "language": "de"
+          "GitHub: https://github.com/Fidode07",
+          "",
+          "The option 'train_on_boot', trains the AI just before it is started.",
+          "This is important and recommended, because if you change the .json file to have custom responses, then the change will",
+          "only have effect with that."],
+        "language": "de",
+        "train_on_boot": "true"
     }
   ]
 }
