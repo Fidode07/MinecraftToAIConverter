@@ -42,7 +42,6 @@ def stem(word):
     words = [stem(w) for w in words]
     -> ["organ", "organ", "organ"]
     """
-    print("STEMMED: " + str(stemmer.stem(word.lower())))
     return stemmer.stem(word.lower())
 
 
@@ -57,9 +56,6 @@ def bag_of_words(tokenized_sentence, words):
     """
 
     sentence_words = [stem(word) for word in tokenized_sentence]
-
-    print("SENTENCE WORDS")
-    print(sentence_words)
 
     bag = np.zeros(len(words), dtype=np.float32)
     for idx, w in enumerate(words):

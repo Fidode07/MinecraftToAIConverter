@@ -131,13 +131,9 @@ while True:
 
                 print("REPONSE: " + response)
                 host = "localhost"
-                # Ein INet Streaming (TCP/IP) Socket erzeugen
                 s2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-                # Zum Server verbinden
                 s2.connect((host, 4839))
-                # Unsere Nachricht senden
                 s2.send(str(response).encode())
-                # Verbindung trennen
                 s2.close()
     else:
         CurTransLator = Translator.MyCustomTranslator()
@@ -148,11 +144,7 @@ while True:
                                                            "Bitte vergiss dabei aber nicht, dass ich zurzeit nur dazu "
                                                            "da bin, um mit dir zu handeln! ", lang=mySetting['language'])
         host = "localhost"
-        # Ein INet Streaming (TCP/IP) Socket erzeugen
         s2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        # Zum Server verbinden
         s2.connect((host, 4839))
-        # Unsere Nachricht senden
         s2.send(str(response).encode())
-        # Verbindung trennen
         s2.close()
