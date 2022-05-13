@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="UncompiledPlugin:jar">
+    <output-path>$PROJECT_DIR$/../../Minecraft/LinuxServer/plugins</output-path>
+    <root id="archive" name="UncompiledPlugin.jar">
+      <element id="module-output" name="UncompiledPlugin" />
+      <element id="file-copy" path="$PROJECT_DIR$/plugin.yml" />
+      <element id="library" level="project" name="spigot-1.12.2" />
+    </root>
+  </artifact>
+</component>

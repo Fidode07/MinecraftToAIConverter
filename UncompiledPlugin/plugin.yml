@@ -1,0 +1,7 @@
+name: MinecraftToAIConverter
+version: 1.0
+main: de.fido.main.Main
+
+commands:
+  chat:
+    description: Chat with the Nearbest Villager!
