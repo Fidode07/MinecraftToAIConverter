@@ -52,7 +52,7 @@ else:
 
     TrainerUtil.MyTrain.train_a_model(mySetting['language'])
 
-with open("Models/"+mySetting["language"]+".json", 'r', encoding='utf-8') as json_data:
+with open("Models/" + mySetting["language"] + ".json", 'r', encoding='utf-8') as json_data:
     intents = json.load(json_data)
 
 FILE = f"Models/{mySetting['language']}.pth"
@@ -69,11 +69,9 @@ model = NeuralNet(input_size, hidden_size, output_size).to(device)
 model.load_state_dict(model_state)
 model.eval()
 
-
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.bind(('', 7777))
 s.listen(1)
-
 
 while True:
     print("On Receive ...")
@@ -142,10 +140,13 @@ while True:
                 # Verbindung trennen
                 s2.close()
     else:
-        print("WE NOT SURE AND ITS NOT A QUESTION!")
-        response = "Tut mir leid, ich bin leider noch nicht weit genug entwickelt, um das zu verstehen. " \
-                   "Allerdings werde ich versuchen, das, was du gesagt hast, irgendwann verstehen zu können. " \
-                   "Bitte vergiss dabei aber nicht, dass ich zurzeit nur dazu da bin, um mit dir zu handeln! "
+        CurTransLator = Translator.MyCustomTranslator()
+        response = CurTransLator.my_translate(inputsetence="Tut mir leid, ich bin leider noch nicht weit genug "
+                                                           "entwickelt, um das zu verstehen. " \
+                                                           "Allerdings werde ich versuchen, das, was du gesagt hast, "
+                                                           "irgendwann verstehen zu können. " \
+                                                           "Bitte vergiss dabei aber nicht, dass ich zurzeit nur dazu "
+                                                           "da bin, um mit dir zu handeln! ", lang=mySetting['language'])
         host = "localhost"
         # Ein INet Streaming (TCP/IP) Socket erzeugen
         s2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

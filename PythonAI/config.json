@@ -11,9 +11,13 @@
           "",
           "The option 'train_on_boot', trains the AI just before it is started.",
           "This is important and recommended, because if you change the .json file to have custom responses, then the change will",
-          "only have effect with that."],
+          "only have effect with that.",
+          "",
+          "In the field 'full_word_language' your language must be entered as (who would have thought it) a whole word. e.g.",
+          "for German 'german' must be entered and for English 'english' must be entered."],
         "language": "en",
-        "train_on_boot": "true"
+        "train_on_boot": "true",
+        "full_word_language": "english"
     }
   ]
 }

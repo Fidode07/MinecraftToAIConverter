@@ -6,6 +6,11 @@ class MyCustomTranslator:
     def __init__(self) -> None:
         print("ModelTranslator was booted!")
 
+    def my_translate(self, inputsetence: str, lang: str):
+        translated = GoogleTranslator(source="de", target=lang).translate(inputsetence)
+        print(translated)
+        return translated
+
     def translateModel(self, lang: str):
         abschnitte = []
         data = None
