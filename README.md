@@ -11,20 +11,22 @@
 4. After that go to the page [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/), choose what you need and then execute the command that the page gave you
 5. After that, you just drag the plugin (MinecraftToAIConverter.jar) to the plugin folder from the server and run the Python script (The AI).
 
-WOW!!! Your villagers can now reveal their names .... 👏 
+WOW!!! Your villagers can now reveal their names .... 👏 </br>
 <strong>NOTE:</strong> CUDA and CUDnn are not required for this lightweight AI! It should be able to run just as well on the CPU.
 
-<h2>Help! Where! I AM TOO STUPID!</h2>
-  I'm just kidding, the installation is really a bit complicated. Just write me on Discord, I'm always happy to help you: Fido_de02#9227.
+<h2>Help! Where! PLEASE!</h2>
+  Yes, you're right. The installation is really a bit complicated. Just write me on Discord, I'm always happy to help you: Fido_de02#9227.
 
 <h2><strong>IMPORTANT!</strong></h2>
   The AI was pretty stupid. Very stupid to be honest. But because I'm so cool, that's over now. I made a translator, you can now choose your language in the "Config.json". It is located in "PythonAI/Config.json".👌
+  </br></br>
+  Also, it is very important that you customize the Config.json. It's really not hard (and not much). If not, it doesn't work either (Like a PC without power/Like me with math).
 
 <h2>💻 Can my potato (computer) even do that? Can my wonder potato run an AI? 💻</h2>
   All right, let me think about it. I have a GTX 970 with hardware errors, and the AI is still good even on CPU. In itself, everything should run cleanly, even without CUDA.
 
 <h2>HOW DOES IT WORK INGAME!!</h2>
-  You can write with the villagers with /chat (message). They will start glowing when you are close enough for them to understand you. Also, they all have one of 44 names that will stay forever.
+  You can write with the villagers with /chat (message). They will start glowing when you are close enough for them to understand you.
 
 <h2>ℹ️ Other Informations ℹ️ </h2>
   Trained on: GTX 970 (with Hardware errors) and i3 10100f
