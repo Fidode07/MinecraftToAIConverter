@@ -27,8 +27,8 @@ WOW!!! Your villagers can now reveal their names .... 👏
 <h2>ℹ️ Other Informations ℹ️ </h2>
   Trained on: GTX 970 (with Hardware errors) and i3 10100f
 <h2>💡 Wait, what can you do anyway (useless pspsps)? 💡</h2>
-  I can:
-Several languages (I know, I'm just cool)
+  I can:</br>
+Several languages (I know, I'm just cool)</br>
 Make your villagers reveal their names etc.
 
 <h2>🖼️ Images 🖼️</h2>
