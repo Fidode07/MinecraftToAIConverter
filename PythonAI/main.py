@@ -3,11 +3,16 @@
 # Before i forgot/forget (i dont know). THIS IS THE FILE YOU HAVE TO START TO RUN THE AI!
 
 import json
+import os
+import sys
 from random import randrange
 import socket
+import Translator
 import torch
-from ChatBot.model import NeuralNet
-from ChatBot.nltk_utils import bag_of_words, tokenize
+
+import TrainerUtil.MyTrain
+from model import NeuralNet
+from nltk_utils import bag_of_words, tokenize
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -16,12 +21,35 @@ if torch.cuda.is_available():
 else:
     print("Let's try to run this Shit on our CPU ...")
 
+settings = []
+dataBack = None
+with open("config.json", "r") as f:
+    dataBack = json.load(f)
 
-with open('ChatBot/intents.json', 'r', encoding='utf-8') as json_data:
+for abschnitt in dataBack['settings']:
+    settings.append(abschnitt)
+
+try:
+    mySetting = settings[0]
+except IndexError:
+    print("There was a Error by Parsing the Config.json!")
+    sys.exit()
+
+print("Language: " + mySetting["language"])
+
+if os.path.isfile(f"Models/{mySetting['language']}.pth"):
+    print("Model was already rendered!")
+else:
+    print("Lets Translate the German Model to " + mySetting['language'])
+    TransLator = Translator.MyCustomTranslator()
+    TransLator.translateModel(mySetting['language'])
+
+    TrainerUtil.MyTrain.train_a_model(mySetting['language'])
+
+with open("Models/"+mySetting["language"]+".json", 'r', encoding='utf-8') as json_data:
     intents = json.load(json_data)
 
-
-FILE = "ChatBot/model.pth"
+FILE = f"Models/{mySetting['language']}.pth"
 data = torch.load(FILE)
 
 input_size = data["input_size"]

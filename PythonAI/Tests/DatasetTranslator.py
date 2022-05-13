@@ -1,6 +1,4 @@
-import goslate
+from deep_translator import GoogleTranslator
 
-primary_text = 'Es wird langsam Zeit!'
-gs = goslate.Goslate()
-translatet = gs.translate(primary_text, 'en')
-print(translatet)
+translated = GoogleTranslator(source='de', target='en').translate("Kannste mir ein paar Items besorgen?")
+print(translated)

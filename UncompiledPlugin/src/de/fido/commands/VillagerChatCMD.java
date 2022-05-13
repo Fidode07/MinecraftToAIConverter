@@ -15,6 +15,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.entity.Villager;
 
 import java.io.*;
+import java.lang.annotation.Target;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.*;
@@ -24,11 +25,9 @@ import java.util.*;
 public class VillagerChatCMD implements CommandExecutor {
 
     public Entity lastTargetVillager = null;
-    VManager classObjVMan = new VManager();
+    Random generate = new Random();
 
-    public String[] tellMyName = {"Wir besitzen zwar keine Nachnamen, mein Vorname lautet aber ",
-            "Ich hab keinen Nachnamen, aber mein Vorname ist ",
-            "Zwar hab ich keinen Nachnamen, aber mein Vorname ist "};
+    static VManager classObjVMan = new VManager();
 
     public String[] weHaveNoAge = {"Tut mir leid, ein genaues Alter haben wir leider nicht.",
             "Sorry, bedauerlicherweise haben wir kein genaues Alter.",
@@ -73,16 +72,31 @@ public class VillagerChatCMD implements CommandExecutor {
         return str;
     }
 
-    protected ItemStack createGuiItem(final Material material, final String name, final String... lore) {
-        final ItemStack item = new ItemStack(material, 1);
+    public static void setItems(Player p) {
+        ArrayList<ItemStack> curItems = new ArrayList<ItemStack>();
+        int i = 0;
+        if(p.getExp() >= classObjVMan.WoodPrice) {
+            ItemStack testItem1 = createGuiItem(Material.WOOD, ChatColor.GREEN + "Wood ("+String.valueOf(classObjVMan.WoodPrice)+")", 64);
+            curItems.add(testItem1);
+        } else {
+            ItemStack testItem1 = createGuiItem(Material.WOOD, ChatColor.RED + "Wood ("+String.valueOf(classObjVMan.WoodPrice)+", too Expensive!)", 64);
+            curItems.add(testItem1);
+        }
+
+
+        for(ItemStack item : curItems) {
+            classObjVMan.itemSelection1.setItem(i, item);
+            i++;
+        }
+
+    }
+
+    private static ItemStack createGuiItem(Material material, String name, int Amount, final String... lore) {
+        final ItemStack item = new ItemStack(material, Amount);
         final ItemMeta meta = item.getItemMeta();
 
-        item.setAmount(64);
-
-        // Set the name of the item
         ((ItemMeta) meta).setDisplayName(name);
 
-        // Set the lore of the item
         meta.setLore(Arrays.asList(lore));
 
         item.setItemMeta(meta);
@@ -101,7 +115,7 @@ public class VillagerChatCMD implements CommandExecutor {
                         stringBuilder.append(args[i] + " ");
                     }
 
-                    String joinedString = stringBuilder.toString();
+                        String joinedString = stringBuilder.toString();
 
                         Villager TargetVillager = null;
 
@@ -116,41 +130,19 @@ public class VillagerChatCMD implements CommandExecutor {
 
                         String PyResponse = getPythonReponse();
 
-                        if (PyResponse.equalsIgnoreCase("Ja, ich kann dir Items besorgen. Ich öffne eine Auswahl an Items für dich. Vergiss aber nicht, dass ich nicht kostenlos arbeite!") || PyResponse.equalsIgnoreCase("Klar kann ich dir Items besorgen. Ich öffne mal eine Auswahl für dich, vergiss aber nicht das ich nicht Kostenlos bin!") || PyResponse.equalsIgnoreCase("Ja, Items kann ich besorgen. Allerdings arbeite ich nicht kostenlos, ich öffne dir mal eine Auswahl an Items.")) {
-                            File file = new File("plugins/Info" + "money.yml");
-                            FileConfiguration cfg = YamlConfiguration.loadConfiguration(file);
+                        if(PyResponse.contains("%s")) {
+                            PyResponse = String.format(PyResponse, TargetVillager.getCustomName());
+                            System.out.println("[DEBUG]: Succefully Formatted.");
+                        }
 
-                            Inventory inv = Bukkit.createInventory(null, 9, "Items Auswahl");
-
-                            ChatColor k3CoinsColor;
-
-                            if (cfg.getInt(p.getUniqueId() + "money.value") >= Quarzpreis) {
-                                k3CoinsColor = ChatColor.GREEN;
-                            } else {
-                                k3CoinsColor = ChatColor.RED;
-                            }
-
-                            ItemStack QuarzBlockStack = createGuiItem(Material.QUARTZ_BLOCK, ChatColor.LIGHT_PURPLE + "Quarzblöcke (Stack)", k3CoinsColor + String.valueOf(Quarzpreis) + " Coins");
-
-                            inv.setItem(0, QuarzBlockStack);
-
-                            p.openInventory(inv);
-                        } else
-                            if(PyResponse.equals("Ja, ich hab Quests für dich. Ich öffne mal eine Übersicht von verfügbaren Aufträgen für dich.") || PyResponse.equals(
+                        if(PyResponse.equals("Ja, ich hab Quests für dich. Ich öffne mal eine Übersicht von verfügbaren Aufträgen für dich.") || PyResponse.equals(
                                     "Ja, klar hab ich Quests für dich. Ich mach mal eine Übersicht von verfügbaren Aufträgen für dich auf.") || PyResponse.equals(
                                     "Ja, natürlich hab ich Quests. Ich öffne mal eine Übersicht von den verfügbaren Aufträgen.")) {
                                 System.out.println("He want a Quest!");
-                            }
+                        }
 
-                        Random generate = new Random();
 
-                        if(PyResponse.equals("NONERESP")) {
-                            System.out.println("Stopword detected!");
-                        } else if(PyResponse.equals("HEWANTSOURNAME")) {
-                            System.out.println("He try to get our name ...");
-                            p.sendMessage(ChatColor.GOLD+"[DU] " + ChatColor.WHITE + joinedString);
-                            p.sendMessage(ChatColor.DARK_PURPLE + "["+TargetVillager.getCustomName()+" - Villager] " + ChatColor.GRAY + tellMyName[generate.nextInt(tellMyName.length)] + TargetVillager.getCustomName());
-                        } else if(PyResponse.equals("ASKHOWOLD")) {
+                        if(PyResponse.equals("ASKHOWOLD")) {
                             System.out.println("He trys to get our Age.");
                             p.sendMessage(ChatColor.GOLD+"[DU] " + ChatColor.WHITE + joinedString);
                             p.sendMessage(ChatColor.DARK_PURPLE + "["+TargetVillager.getCustomName()+" - Villager] " + ChatColor.GRAY + weHaveNoAge[generate.nextInt(weHaveNoAge.length)]);

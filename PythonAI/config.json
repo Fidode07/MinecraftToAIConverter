@@ -1,0 +1,14 @@
+{
+  "settings": [
+    {
+        "_comment": ["This is only a comment, it has no effect on the functions of the code!",
+          "I explain here how exactly you can add your own language here, in itself it is super easy.",
+          "First you have to see what the abbreviation of your language is.",
+          "For example, for English it is 'en', for German 'de', etc.",
+          "When you have found the abbreviation, change the value of 'language' (the tag below this comment) to the abbreviation.",
+          "If you have any questions, feel free to write me on Discord: Fido_de02#9227",
+          "GitHub: https://github.com/Fidode07"],
+        "language": "de"
+    }
+  ]
+}
