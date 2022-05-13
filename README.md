@@ -26,7 +26,7 @@ WOW!!! Your villagers can now reveal their names .... 👏 </br>
   All right, let me think about it. I have a GTX 970 with hardware errors, and the AI is still good even on CPU. In itself, everything should run cleanly, even without CUDA.
 
 <h2>HOW DOES IT WORK INGAME!!</h2>
-  You can write with the villagers with /chat (message). They will start glowing when you are close enough for them to understand you. Also, they all have one of 44 names that will stay forever.
+  You can write with the villagers with /chat (message). They will start glowing when you are close enough for them to understand you.
 
 <h2>ℹ️ Other Informations ℹ️ </h2>
   Trained on: GTX 970 (with Hardware errors) and i3 10100f
