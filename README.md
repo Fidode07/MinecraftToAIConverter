@@ -8,7 +8,7 @@
 1. You **CAN** install CUDA and CUDnn. Sounds complicated, but it is (If you don't install CUDA and CUDnn, then Artificial Intelligence will run on your CPU).
 2. After that, you need Java 8, which is easy to install (I think).
 3. Before you can start my fine Python script (main.py), you have to install my requirements (pip install -r requirements.txt). 
-4. After that go to the page [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/), choose what you need and then execute the command that the page gave you
+4. After that go to the page <a href="https://pytorch.org/get-started/locally/" target="_blank">https://pytorch.org/get-started/locally/</a>, choose what you need and then execute the command that the page gave you
 5. After that, you just drag the plugin (MinecraftToAIConverter.jar) to the plugin folder from the server and run the Python script (The AI).
 
 WOW!!! Your villagers can now reveal their names .... 👏 </br>
